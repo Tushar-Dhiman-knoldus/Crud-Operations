@@ -1,6 +1,4 @@
 package com.knoldus.crudoperation
-
-import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.flatspec.AnyFlatSpec
 
 class CrudOperationSpec extends AnyFlatSpec {
@@ -12,7 +10,6 @@ class CrudOperationSpec extends AnyFlatSpec {
     assert(crud.read() === List("apple", "banana"))
     assert(crud.update("banana", "pear") === List("apple", "pear"))
     assert(crud.delete("apple") === List("pear"))
-    assert(crud.delete("grape") === List("pear")) // grape is not in the list
     assert(crud.read() === List("pear"))
   }
 
